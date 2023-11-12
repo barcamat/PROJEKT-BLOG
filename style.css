@@ -4,7 +4,7 @@ html { box-sizing: border-box; }
 
 
 body {
-	margin: 10px 377px;
+	margin: 10px 177px;
 	font-family:'Alice', serif;
 	font-size: 18px;
 	line-height: 1.5;
@@ -64,6 +64,7 @@ blockquote {
 	- https://css-tricks.com/patterns-for-practical-css-custom-properties-use/
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
+/**********===GRID ROZDĚLENÍ===***********/
 .blog {
 	display: grid;
 	grid-template-columns: 1fr 4fr 2fr;
@@ -73,109 +74,110 @@ header,
 footer{
 	grid-column: 2/3;
 }
+p {
+	grid-column: 2/3;
+	margin:0;
+}
+.tip-left {
+	grid-column: 1/2;
+}
+.detox,
+.oberte-kere {
+	grid-column: 2/3;
+}
+/*******===HEADER===****************/
 header h1 {
 	color: var(--limetka);
 	font-size: 95px;
 	line-height: 1.2;
-	margin-top: 100px;
+	margin-top: 60px;
 }
-.meta {
+.author {
 	grid-column: 2/3;
 	color: var(--seda);
 	margin-top: 70px;
 	margin-bottom: 0;
 }
-.p1,
-.p2 {
-	margin: 0;
-}
-p {
-	grid-column: 2/3;
-}
-.tip-vlevo {
-	grid-column: 1/2;
-}
+/***********===TIPY===**********************/
 .tip {
-	background-color: rgb(241, 239, 239);
+	background-color: #f1efef;
 	text-align: right;
 	color:var(--tmava);
 	line-height: 1.5;
 	font-size: 16px;
-	padding: 10px 10px;
+	padding: 10px 12px;
 	height:130px;
 	border-right: 2px solid var(--oranzova);
 }
 .tip p{
 	margin:5px;
 }
-.tip a {
+.tip a{
 	color: var(--oranzova);
 }
-figure img {
+.tip__img--palacinky {
+	width: 120px;
+}
+.tip-right {
+	text-align: left;
+	border-right: none;
+	border-left: 2px solid var(--oranzova);
+	height:85px;
+}
+.tip-left2 {
+	height: 225px;
+	padding:15px 15px;
+}
+/**************===IMAGES===******************/
+.main__images img {
 	width:100%;
 }
-figure{
+.main__images{
 	grid-column: 1/span 3;
 	margin: 0;
 }
-blockquote {
+.images--description {
+	color: #95a2a7;
+}
+/****************===BLOCKQUOTE===*******************/
+.blockquote {
 	grid-column: 1/-1;
 	font-size: 35px;
 	color:#a8b7bd;
 	margin:0px auto;
 }
-blockquote::before {
+.blockquote::before,
+.blockquote::after{
 	content:"";
 	display: block;
 	width:100px;
 	height: 3px;
-	background-color:#a3cb38;
+	background-color:var(--limetka);
+}
+blockquote.blockquote-a::before{
 	margin: 0 0 30px 240px;
 }
-blockquote::after {
-	content:"";
-	display: block;
-	width:100px;
-	height: 3px;
-	background-color:#a3cb38;
+blockquote.blockquote-a::after {
 	margin: 30px 0px 0px 240px;
 }
-blockquote.b::before{
+blockquote.blockquote-b::before{
 	margin: 0px 0px 30px 400px;
 	width: 150px;
 }
-blockquote.b::after{
+blockquote.blockquote-b::after{
 	margin: 30px 0px 0px 400px;
 	width: 150px;
 }
-.detox,
-.oberte-kere {
-	grid-column: 2/3;
-}
-.palacinky {
-	width: 100px;
-}
-figcaption {
-	color: #95a2a7;
-}
-.tip-vpravo {
-	text-align: left;
-	border-right: none;
-	border-left: 2px solid var(--oranzova);
-	height: 85px;
-}
+
+/***************===HEADINGS SECTIONS===***********/
 .detox,
 .oberte-kere {
 	color:#a3cb38;
 	font-size: 50px;
+	margin-top: 20px;
 }
-p {
-	margin:0;
-}
-.tip-vlevo2 {
-	height: 200px;
-	padding-right: 10px;
-}
+
+/****************===PATIČKA===****************/
 footer {
 	color:#95a2a7;
 	font-size: 14px;
